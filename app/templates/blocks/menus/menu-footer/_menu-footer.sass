@@ -1,0 +1,37 @@
+/* menu-footer begin
+ ---------------------------------------------------- */
+
+.menu-footer
+  display: flex
+  justify-content: center
+  align-items: center
+  margin: 0
+  width: 100%
+  font-size: 0
+  li
+    margin: 0 13px 0 0
+    padding: 0
+    font-size: 12px
+    text-transform: uppercase
+    &::before
+      display: none
+    &::after
+      content: '|'
+      display: inline-block
+      margin-left: 13px
+      color: $gray
+    &:last-child
+      margin: 0
+      &::after
+        display: none
+
+  a
+    display: inline-block
+    white-space: nowrap
+    text-decoration: none!important
+    color: $gray
+    &:hover
+      color: $yellow
+
+/* menu-footer end
+ ---------------------------------------------------- */

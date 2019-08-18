@@ -17,7 +17,7 @@ ul.social a:hover {
   text-shadow: -3px 0 8px #398be7, 3px 0 8px #398be7, 0 3px 8px #398be7, 0 -3px 8px #398be7;
 }
 
-.header-line::after {
+.header-line::after, .footer::before {
   background: #2c6f91;
   background: -webkit-gradient(linear, left top, right top, from(#2c6f91), color-stop(10%, #2c6f91), color-stop(20%, #61aed4), color-stop(30%, #afe1fa), color-stop(40%, #61aed4), color-stop(50%, #afe1fa), color-stop(60%, #61aed4), color-stop(70%, #afe1fa), color-stop(80%, #61aed4), color-stop(90%, #2c6f91), to(#2c6f91));
   background: -o-linear-gradient(left, #2c6f91 0%, #2c6f91 10%, #61aed4 20%, #afe1fa 30%, #61aed4 40%, #afe1fa 50%, #61aed4 60%, #afe1fa 70%, #61aed4 80%, #2c6f91 90%, #2c6f91 100%);
@@ -122,9 +122,22 @@ a.inherit:hover {
 /* sections begin
  ---------------------------------------------------- */
 .outer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   position: relative;
   right: 0;
   z-index: 5;
+}
+
+.outer .footer {
+  margin-top: auto;
 }
 
 .container {
@@ -1354,16 +1367,247 @@ ul.social a.icon::before {
 /* footer begin
  ---------------------------------------------------- */
 .footer {
-  position: absolute;
-  bottom: 0;
-  left: 0;
-  z-index: 20;
-  background: #EFF2F6;
-  padding: 45px 0 40px;
+  position: relative;
+  z-index: 10;
+  background: #000;
+  padding: 0 0 165px;
   width: 100%;
 }
 
+.footer::before {
+  content: '';
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 1px;
+}
+
+.footer__inner {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  padding: 25px 0;
+}
+
+.footer .partners {
+  margin: 20px 0 15px;
+}
+
+.footer .copywrite {
+  margin: 0;
+  font-size: 10px;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+  color: #656666;
+}
+
+@media only screen and (max-width: 1199px) {
+  .footer {
+    padding: 0 0 110px;
+  }
+}
+
+@media only screen and (max-width: 991px) {
+  .footer {
+    padding: 0 0 70px;
+  }
+}
+
+@media only screen and (max-width: 767px) {
+  .footer {
+    padding: 0 0 50px;
+  }
+}
+
+@media only screen and (min-width: 480px) and (max-width: 567px) {
+  .footer .menu-footer li {
+    margin-right: 8px;
+    font-size: 10px;
+  }
+  .footer .menu-footer li::after {
+    margin-left: 8px;
+  }
+}
+
+@media only screen and (max-width: 479px) {
+  .footer {
+    padding: 0 0 30px;
+  }
+  .footer .menu-footer {
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    width: 100%;
+  }
+  .footer .menu-footer li {
+    margin-right: 0;
+    margin-bottom: 20px;
+    width: 100%;
+    text-align: center;
+  }
+  .footer .menu-footer li::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: -10px;
+    background: #a2a1a1;
+    opacity: .4;
+    margin-left: -25px;
+    width: 50px;
+    height: 1px;
+  }
+}
+
 /* footer end
+ ---------------------------------------------------- */
+/* menu-footer begin
+ ---------------------------------------------------- */
+.menu-footer {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0;
+  width: 100%;
+  font-size: 0;
+}
+
+.menu-footer li {
+  margin: 0 13px 0 0;
+  padding: 0;
+  font-size: 12px;
+  text-transform: uppercase;
+}
+
+.menu-footer li::before {
+  display: none;
+}
+
+.menu-footer li::after {
+  content: '|';
+  display: inline-block;
+  margin-left: 13px;
+  color: #a2a1a1;
+}
+
+.menu-footer li:last-child {
+  margin: 0;
+}
+
+.menu-footer li:last-child::after {
+  display: none;
+}
+
+.menu-footer a {
+  display: inline-block;
+  white-space: nowrap;
+  text-decoration: none !important;
+  color: #a2a1a1;
+}
+
+.menu-footer a:hover {
+  color: #f2de7b;
+}
+
+/* menu-footer end
+ ---------------------------------------------------- */
+/* partners begin
+ ---------------------------------------------------- */
+.partners {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-flex-wrap: wrap;
+      -ms-flex-wrap: wrap;
+          flex-wrap: wrap;
+  -webkit-box-pack: center;
+  -webkit-justify-content: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+  -webkit-align-items: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+  padding: 10px 0;
+  width: 100%;
+}
+
+.partners::before, .partners::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  background: -webkit-gradient(linear, left top, right top, from(rgba(2, 46, 68, 0)), color-stop(45%, #022e44), color-stop(50%, #022e44), color-stop(55%, #022e44), to(rgba(2, 46, 68, 0)));
+  background: -o-linear-gradient(left, rgba(2, 46, 68, 0) 0%, #022e44 45%, #022e44 50%, #022e44 55%, rgba(2, 46, 68, 0) 100%);
+  background: linear-gradient(to right, rgba(2, 46, 68, 0) 0%, #022e44 45%, #022e44 50%, #022e44 55%, rgba(2, 46, 68, 0) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#00022e44', endColorstr='#00022e44',GradientType=1 );
+  width: 100%;
+  height: 1px;
+}
+
+.partners::before {
+  top: 0;
+}
+
+.partners::after {
+  bottom: 0;
+}
+
+.partners li {
+  margin: 10px 20px;
+  padding: 0;
+  max-width: 25%;
+}
+
+.partners li::before {
+  display: none;
+}
+
+.partners img {
+  position: relative;
+  -webkit-filter: grayscale(1);
+          filter: grayscale(1);
+  -webkit-transition: .3s;
+  -o-transition: .3s;
+  transition: .3s;
+}
+
+.partners img:hover {
+  -webkit-filter: grayscale(0);
+          filter: grayscale(0);
+}
+
+.partners img[alt="VISA"] {
+  top: 5px;
+}
+
+.partners img[alt="liqpay.com"] {
+  top: 11px;
+}
+
+.partners img[alt="Qiwi Wallet"] {
+  top: 7px;
+}
+
+/* partners end
  ---------------------------------------------------- */
 /* ----------------------------------------------------
  other begin

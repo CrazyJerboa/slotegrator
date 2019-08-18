@@ -19,6 +19,26 @@ function bodyDetach() {
 // body attaching end
 // --------------------------------------------------
 
+// outer min-height begin
+// --------------------------------------------------
+
+outerSetMinHeight();
+window.onresize = function() {
+  outerSetMinHeight();
+}
+window.onload = function() {
+  outerSetMinHeight();
+}
+function outerSetMinHeight() {
+  var outer = document.querySelector('.outer');
+	var window_height = window.innerHeight;
+
+	outer.style.minHeight = window_height + 'px';
+}
+
+// outer min-height end
+// --------------------------------------------------
+
 // header begin
 // --------------------------------------------------
 
