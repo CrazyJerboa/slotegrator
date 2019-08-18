@@ -8,11 +8,14 @@
 
 .container
   padding: 0 $indent
-  max-width: 1030px
 
 .section
   position: relative
   padding: $indent_section 0
+
+@media only screen and (min-width: 1200px)
+  .container
+    max-width: 1030px
 
 @media only screen and (max-width: 567px)
   .container

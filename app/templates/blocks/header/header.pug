@@ -18,9 +18,14 @@ header.header
   |
   |
   .second.header-line
+    .before
+    |
+    |
+    span.menu__close.button.icon.icon-close
+    |
+    |
     .container
       .header-line__inner
-        include ../menus/menu-main/menu-main.pug
         |
         |
         a.fast-reg_btn(href="#") 
@@ -28,10 +33,22 @@ header.header
           span.text Быстрая регистрация
         |
         |
+        include ../menus/menu-main/menu-main.pug
+        |
+        |
         include ../social/social.pug
         |
         |
-        include ../forms/form-login/form-login.pug
+        button.form-login_btn.button(type="button") Login 
+        .form-login__outer
+          |
+          |
+          span.form-login__close.back
+            span.icon.icon-arr_left
+            span.text Назад
+          |
+          |
+          include ../forms/form-login/form-login.pug
 |
 |
 // end header

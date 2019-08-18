@@ -46,5 +46,41 @@
     &:active
       background: rgba(153, 43, 0, .2)
 
+
+
+.more, .back
+  display: inline-block
+  position: relative
+  font-size: 13px
+  font-weight: 400
+  text-decoration: none !important
+  @extend %links-hover
+  cursor: pointer
+  transition: $def_trn
+  .icon
+    position: absolute
+    top: 50%
+    font-size: 12px
+    @extend %links-blue
+    transform: translateY(-50%)
+    transition: right 0.3s, left 0.3s
+  &:hover
+    @extend %links-blue
+.more
+  padding-right: 20px
+  .icon
+    right: 5px
+  &:hover
+    .icon
+      right: 0
+
+.back
+  padding-left: 20px
+  .icon
+    left: 5px
+  &:hover
+    .icon
+      left: 0
+
 /* buttons end
  ---------------------------------------------------- */

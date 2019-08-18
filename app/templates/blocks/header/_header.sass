@@ -8,7 +8,7 @@ $second_height: 80px
   position: relative
   z-index: 15
 
-  .header-line
+  &-line
     position: relative
 
     &::after
@@ -40,6 +40,40 @@ $second_height: 80px
     &.second
       background: #000
       height: $second_height
+
+      .menu__close
+        display: none
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 103px
+        left: 288px
+        z-index: 10
+        background: transparent
+        padding: 0
+        width: 22px
+        min-width: 0
+        text-align: center
+        font-size: 8px
+        color: #fff
+        &.button::before
+          position: relative
+          background: transparent
+          opacity: 1
+          height: auto
+          border-radius: 0
+
+      .before
+        display: none
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 5
+        background: #000
+        opacity: .6
+        width: 100%
+        height: 100%
+
       .header-line__inner
         &::before
           content: ''
@@ -54,19 +88,47 @@ $second_height: 80px
           height: 100%
           transform: translateX(-50%)
 
+  .hamburger
+    display: none
+    align-items: center
+    position: relative
+    width: 30px
+    height: 30px
+    cursor: pointer
+    span, span::before, span::after
+      background: $gray
+      width: 100%
+      height: 2px
+      transition: $def_trn
+    &:hover
+      span, span::before, span::after
+        background: $blue_light
+        box-shadow: 0 0 5px 3px $blue
+    span
+      &::before, &::after
+        content: ''
+        position: absolute
+        left: 0
+      &::before
+        top: 6px
+      &::after
+        bottom: 6px
+
+
   .logo
     position: absolute
     top: 58px
     left: 0
 
   .menu-main
-    position: fixed
-    top: 0
+    position: absolute
+    top: -50px
     z-index: 10
+    max-width: 60%
     height: $first_height
 
   .lang
-    margin-left: 20px
+    margin-left: auto
 
   .fast-reg_btn
     display: inline-flex
@@ -94,8 +156,13 @@ $second_height: 80px
   .form-login
     display: flex
     align-items: flex-start
-    margin-left: auto
     max-width: none
+    &__outer
+      margin-left: auto
+    &__close
+      display: none
+    &_btn
+      display: none
 
     .reg_btn
       left: -10px
@@ -110,6 +177,227 @@ $second_height: 80px
       top: 2px
       margin-left: 10px
       padding: 0
+
+@media only screen and (max-width: 1199px)
+  .header
+    .menu-main
+      li
+        margin-right: 15px
+
+    .fast-reg_btn
+      right: 220px
+
+    .social
+      right: 100px
+
+@media only screen and (min-width: 768px) and (max-width: 991px)
+  .header
+    &-line
+      &.first
+        height: 80px
+
+    .logo
+      position: absolute
+      top: 88px
+      left: 0
+
+    .menu-main
+      justify-content: space-between
+      top: -80px
+      width: 100%
+      max-width: none
+      li
+        margin-right: 30px
+
+    .lang
+      top: 20px
+
+    .fast-reg_btn
+      top: -30px
+      left: 0
+      right: auto
+
+    .social
+      top: -35px
+      right: 120px
+
+@media only screen and (max-width: 767px)
+  .header
+    &-line
+      &.second
+        position: fixed
+        top: -50px
+        left: -100%
+        z-index: 20
+        background: transparent
+        opacity: 0
+        width: 100%
+        height: calc(100% + 100px)
+        transition: opacity .3s, left 0s .3s
+
+        .menu_opened &
+          left: 0
+          transition: opacity .3s, left 0s
+
+        .menu__close
+          display: inline-flex
+
+        .before
+          display: block
+
+        .container
+          position: relative
+          left: -280px
+          z-index: 10
+          background: $gray_dark
+          overflow: hidden
+          margin: 0
+          padding: 50px 15px
+          max-width: 280px
+          height: 100%
+          transition: left .3s
+
+          .menu_opened &
+            left: 0
+
+        .header-line__inner
+          flex-direction: column
+          justify-content: space-between
+          position: relative
+          padding: 50px 0
+          &::before
+            display: none
+
+    .hamburger
+      display: inline-flex
+
+    .logo
+      position: relative
+      top: 0
+      left: 0
+      margin-left: 20px
+      width: 90px
+      &::after
+        display: none
+
+    .fast-reg_btn
+      align-items: flex-start
+      order: 1
+      position: static
+      margin-right: auto
+      max-width: 30%
+
+    .menu-main
+      order: 2
+      position: relative
+      top: 0
+      flex-direction: column
+      align-items: flex-start
+      margin-top: auto
+      margin-bottom: auto
+      max-width: none
+      height: auto
+      li
+        margin-bottom: 15px
+        margin-right: 0
+        font-size: 16px
+
+    .social
+      order: 4
+      position: relative
+      top: 0
+      right: 0
+      a
+        width: 36px
+        height: 36px
+        text-decoration: none
+        &.icon
+          display: inline-flex
+          justify-content: center
+          align-items: center
+          &-fb
+            font-size: 14px
+          &-tw
+            font-size: 10px
+          &-vk
+            font-size: 8px
+
+    .form-login_btn
+      display: inline-block
+      position: absolute
+      top: 53px
+      right: 0
+      margin-bottom: 30px
+
+    .form-login
+      flex-direction: column
+      justify-content: center
+      width: 200px
+
+      &__close
+        display: inline-block
+        position: absolute
+        top: 57px
+        left: 15px
+
+      &__outer
+        display: flex
+        justify-content: center
+        align-items: center
+        position: absolute
+        top: 0
+        left: calc(100% + 15px)
+        z-index: 20
+        padding: 80px 15px 50px
+        width: calc(100% + 30px)
+        height: 100%
+        background: $gray_dark
+        transition: left .3s
+        &.opened
+          left: -15px
+
+      .reg_btn
+        top: 0
+        left: 0
+
+      .form-element
+        margin: 0 0 20px
+        width: 100%
+        max-width: none
+
+      .forgot_pass_btn
+        margin-top: 15px
+
+      .submit-element
+        top: 0
+        margin: 0
+        width: 100%
+
+
+
+@media only screen and (max-height: 479px)
+  .header
+    &-line
+      &.second
+        .menu__close
+          top: 68px
+        .header-line__inner
+          padding: 15px 0
+
+    .menu-main
+      li
+        margin-bottom: 10px
+        font-size: 13px
+
+    .form-login_btn
+      top: 18px
+
+
+    .form-login
+      &__close
+        top: 23px
+      &__outer
+        padding: 45px 15px 15px
 
 /* header end
  ---------------------------------------------------- */

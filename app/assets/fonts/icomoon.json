@@ -1,73 +1,101 @@
 {
   "selection": [
     {
+      "order": 17,
+      "name": "close_bold"
+    },
+    {
       "order": 2,
-      "name": "arr_down"
+      "name": "arr_down",
+      "prevSize": 32
     },
     {
       "order": 3,
-      "name": "arr_left"
+      "name": "arr_left",
+      "prevSize": 32
     },
     {
       "order": 4,
-      "name": "arr_right"
+      "name": "arr_right",
+      "prevSize": 32
     },
     {
       "order": 5,
-      "name": "arr_up"
+      "name": "arr_up",
+      "prevSize": 32
     },
     {
       "order": 7,
-      "name": "search"
+      "name": "search",
+      "prevSize": 32
     },
     {
       "order": 11,
-      "name": "cards"
+      "name": "cards",
+      "prevSize": 32
     },
     {
       "order": 13,
-      "name": "flash"
+      "name": "flash",
+      "prevSize": 32
     },
     {
       "order": 14,
-      "name": "new"
+      "name": "new",
+      "prevSize": 32
     },
     {
       "order": 15,
-      "name": "roulette"
+      "name": "roulette",
+      "prevSize": 32
     },
     {
       "order": 6,
-      "name": "ruby"
+      "name": "ruby",
+      "prevSize": 32
     },
     {
       "order": 8,
-      "name": "slot"
+      "name": "slot",
+      "prevSize": 32
     },
     {
       "order": 12,
-      "name": "fb"
+      "name": "fb",
+      "prevSize": 32
     },
     {
       "order": 9,
-      "name": "tw"
+      "name": "tw",
+      "prevSize": 32
     },
     {
       "order": 10,
-      "name": "vk"
+      "name": "vk",
+      "prevSize": 32
     }
   ],
   "metadata": {
     "name": "Untitled Set",
     "importSize": {
-      "width": 47,
-      "height": 28
+      "width": 9,
+      "height": 9
     },
-    "iconsHash": 2038827913
+    "iconsHash": 959697864
   },
   "height": 1024,
   "prevSize": 32,
   "icons": [
+    {
+      "paths": [
+        "M76.255 76.255l871.489 871.489zM3.268 158.393l154.036-154.036 870.4 870.4-154.036 154.145z",
+        "M3.268 867.132l870.4-870.4 154.145 154.036-870.4 870.4z"
+      ],
+      "grid": 0,
+      "tags": [
+        "close_bold"
+      ]
+    },
     {
       "paths": [
         "M673.018 853.936v0l-673.018-683.873 166.445-170.064 673.018 683.873 673.018-683.873 170.064 170.064-843.081 853.936z"
@@ -83,12 +111,13 @@
         "arr_down"
       ],
       "colorPermutations": {
-        "11612613311621611611": [
+        "1161261331162161161181931031": [
           {
-            "f": 1
+            "f": 2
           }
         ]
-      }
+      },
+      "defaultCode": 59648
     },
     {
       "paths": [
@@ -105,12 +134,13 @@
         "arr_left"
       ],
       "colorPermutations": {
-        "11612613311621611611": [
+        "1161261331162161161181931031": [
           {
-            "f": 1
+            "f": 2
           }
         ]
-      }
+      },
+      "defaultCode": 59649
     },
     {
       "paths": [
@@ -127,12 +157,13 @@
         "arr_right"
       ],
       "colorPermutations": {
-        "11612613311621611611": [
+        "1161261331162161161181931031": [
           {
-            "f": 1
+            "f": 2
           }
         ]
-      }
+      },
+      "defaultCode": 59650
     },
     {
       "paths": [
@@ -149,12 +180,13 @@
         "arr_up"
       ],
       "colorPermutations": {
-        "11612613311621611611": [
+        "1161261331162161161181931031": [
           {
-            "f": 1
+            "f": 2
           }
         ]
-      }
+      },
+      "defaultCode": 59651
     },
     {
       "paths": [
@@ -164,7 +196,8 @@
       "grid": 0,
       "tags": [
         "search"
-      ]
+      ],
+      "defaultCode": 59652
     },
     {
       "paths": [
@@ -175,7 +208,8 @@
       "grid": 0,
       "tags": [
         "cards"
-      ]
+      ],
+      "defaultCode": 59653
     },
     {
       "paths": [
@@ -185,7 +219,8 @@
       "grid": 0,
       "tags": [
         "flash"
-      ]
+      ],
+      "defaultCode": 59654
     },
     {
       "paths": [
@@ -194,7 +229,8 @@
       "grid": 0,
       "tags": [
         "new"
-      ]
+      ],
+      "defaultCode": 59655
     },
     {
       "paths": [
@@ -205,7 +241,8 @@
       "grid": 0,
       "tags": [
         "roulette"
-      ]
+      ],
+      "defaultCode": 59656
     },
     {
       "paths": [
@@ -222,7 +259,8 @@
       "grid": 0,
       "tags": [
         "ruby"
-      ]
+      ],
+      "defaultCode": 59657
     },
     {
       "paths": [
@@ -236,7 +274,8 @@
       "grid": 0,
       "tags": [
         "slot"
-      ]
+      ],
+      "defaultCode": 59658
     },
     {
       "paths": [
@@ -254,12 +293,13 @@
         "fb"
       ],
       "colorPermutations": {
-        "11612613311621611611": [
+        "1161261331162161161181931031": [
           {
-            "f": 0
+            "f": 1
           }
         ]
-      }
+      },
+      "defaultCode": 59659
     },
     {
       "paths": [
@@ -277,12 +317,13 @@
         "tw"
       ],
       "colorPermutations": {
-        "11612613311621611611": [
+        "1161261331162161161181931031": [
           {
-            "f": 0
+            "f": 1
           }
         ]
-      }
+      },
+      "defaultCode": 59660
     },
     {
       "paths": [
@@ -300,16 +341,23 @@
         "vk"
       ],
       "colorPermutations": {
-        "11612613311621611611": [
+        "1161261331162161161181931031": [
           {
-            "f": 0
+            "f": 1
           }
         ]
-      }
+      },
+      "defaultCode": 59661
     }
   ],
   "colorThemes": [
     [
+      [
+        81,
+        93,
+        103,
+        1
+      ],
       [
         116,
         126,
@@ -333,12 +381,15 @@
     "showSVGs": true,
     "fontPref": {
       "prefix": "icon-",
-      "metadata": {},
+      "metadata": {
+        "fontFamily": "icomoon"
+      },
       "metrics": {
         "emSize": 1024,
         "baseline": 6.25,
         "whitespace": 50
-      }
+      },
+      "embed": false
     },
     "imagePref": {
       "prefix": "icon-",

@@ -38,8 +38,14 @@
         </div>
         
         <div class="second header-line">
+          <div class="before"></div>
+          <span class="menu__close button icon icon-close"></span>
+          
           <div class="container">
             <div class="header-line__inner">
+              
+              <a class="fast-reg_btn" href="#"> <span class="icon icon-flash"></span><span class="text">Быстрая регистрация</span></a>
+              
               <!-- menu-main begin-->
               <ul class="menu menu-main">
                 <li><a href="#">Все игры</a></li>
@@ -50,7 +56,6 @@
                 <li><a href="#">Контакты</a></li>
               </ul>
               <!-- menu-main end-->
-              <a class="fast-reg_btn" href="#"> <span class="icon icon-flash"></span><span class="text">Быстрая регистрация</span></a>
               
               <!-- social begin-->
               <ul class="social">
@@ -60,26 +65,32 @@
               </ul>
               <!-- social end-->
               
-              <!-- form-login begin-->
-              <form class="form-login">
-                <div class="form-element text-center">
-                  <button class="button reg_btn" type="button">Registration</button>
-                </div>
+              <button class="form-login_btn button" type="button">Login </button>
+              <div class="form-login__outer">
                 
-                <div class="form-element">
-                  <input type="text" name="username" placeholder="Username" required>
-                </div>
+                <span class="form-login__close back"><span class="icon icon-arr_left"></span><span class="text">Назад</span></span>
                 
-                <div class="form-element">
-                  <input type="password" name="password" placeholder="Password" required>
-                  <a class="forgot_pass_btn" href="#">Forgot your password?</a>
-                </div>
-                
-                <div class="submit-element">
-                  <button class="button orange" type="submit">Login</button>
-                </div>
-              </form>
-              <!-- form-login end-->
+                <!-- form-login begin-->
+                <form class="form-login">
+                  <div class="form-element text-center">
+                    <button class="button reg_btn" type="button">Registration</button>
+                  </div>
+                  
+                  <div class="form-element">
+                    <input type="text" name="username" placeholder="Username" required>
+                  </div>
+                  
+                  <div class="form-element">
+                    <input type="password" name="password" placeholder="Password" required>
+                    <a class="forgot_pass_btn" href="#">Forgot your password?</a>
+                  </div>
+                  
+                  <div class="submit-element">
+                    <button class="button orange" type="submit">Login</button>
+                  </div>
+                </form>
+                <!-- form-login end-->
+              </div>
             </div>
           </div>
         </div>
@@ -120,7 +131,7 @@
       <!-- include ../blocks/footer/footer.pug-->
     </div>
      
-    <script src="js/libs.min.js"></script>
-    <script src="js/scripts.js"></script>
+    <script src="assets/js/libs.min.js"></script>
+    <script src="assets/js/scripts.js"></script>
   </body>
 </html>
