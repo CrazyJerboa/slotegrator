@@ -1,0 +1,28 @@
+/* logo begin
+  ---------------------------------------------------- */
+
+.logo
+  display: flex
+  align-items: center
+  position: relative
+  width: 170px
+  text-decoration: none !important
+
+  img
+    width: 100%
+
+  &::after
+    content: ''
+    display: inline-block
+    position: absolute
+    top: 45%
+    left: 49%
+    z-index: 10
+    background: url('../img/logo_after.png') no-repeat center
+    background-size: 100%
+    width: 150%
+    height: 150%
+    transform: translate(-50%, -50%)
+
+/* logo end
+  ---------------------------------------------------- */

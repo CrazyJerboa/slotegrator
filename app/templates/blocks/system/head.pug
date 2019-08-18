@@ -1,0 +1,13 @@
+- var head_title = 'Страница'
+
+- if (include_head_title && include_head_title != '')
+  - head_title = include_head_title
+
+meta(charset='UTF-8')
+meta(name='viewport', content='width=device-width, initial-scale=1.0')
+meta(http-equiv='X-UA-Compatible', content='ie=edge')
+title #{head_title}
+link(rel='stylesheet', href='assets/css/libs.min.css')
+link(rel='stylesheet', href='assets/css/styles.css')
+link(rel='stylesheet', href='assets/fonts/SFUIDisplay/SFUIDisplay.css')
+link(rel='stylesheet', href='assets/fonts/icomoon/style.css')

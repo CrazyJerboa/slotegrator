@@ -32,30 +32,30 @@ var gulp          = require('gulp'),
     del           = require('del');
 
 gulp.task('sass', function() {
-  return gulp.src(['app/sass/**/*.+(scss|sass)', 'app/templates/**/*.+(scss|sass)'])
+  return gulp.src(['app/assets/sass/**/*.+(scss|sass)', 'app/templates/**/*.+(scss|sass)'])
   .pipe(sass({outputStyle: 'expanded',}).on('error', sass.logError))
   .pipe(autoprefixer(['last 15 versions', '> 1%', 'ie 8', 'ie 7'], {
     cascade: true
   }))
-  .pipe(gulp.dest('app/css'))
+  .pipe(gulp.dest('app/assets/css'))
   .pipe(browserSync.reload({stream: true}));
 }); //gulp sass
 
 gulp.task('js-import', function() {
-  return gulp.src('app/js-dev/scripts.js')
+  return gulp.src('app/assets/js-dev/scripts.js')
   .pipe(jsImport())
-  .pipe(gulp.dest('app/js'))
+  .pipe(gulp.dest('app/assets/js'))
   .pipe(browserSync.reload({stream: true}));
 }); //gulp js-import
 
 gulp.task('scripts', function() {
   return gulp.src([
-    'app/libs/device/device.js',
-    'app/libs/tiny-slider-master/dist/tiny-slider.js'
+    'app/assets/libs/device/device.js',
+    'app/assets/libs/tiny-slider-master/dist/tiny-slider.js'
   ])
   .pipe(concat('libs.min.js'))
   .pipe(uglify())
-  .pipe(gulp.dest('app/js'));
+  .pipe(gulp.dest('app/assets/js'));
 }); //gulp scripts
 
 gulp.task('clear-cache', function() {
@@ -74,12 +74,12 @@ gulp.task('html', function() {
 // return gulp.src('app/css/libs.css')
 gulp.task('css-libs', gulp.parallel('sass', function() {
   return gulp.src([
-    'app/libs/bootstrap4_grid/bootstrap-grid.min.css',
-    'app/libs/tiny-slider-master/dist/tiny-slider.css'
+    'app/assets/libs/bootstrap4_grid/bootstrap-grid.min.css',
+    'app/assets/libs/tiny-slider-master/dist/tiny-slider.css'
   ])
   .pipe(concat('libs.min.css'))
   .pipe(cssnano())
-  .pipe(gulp.dest('app/css'));
+  .pipe(gulp.dest('app/assets/css'));
 })); //gulp css-libs
 
 gulp.task('browser-sync', function() {
@@ -105,15 +105,15 @@ gulp.task('watch', gulp.parallel('browser-sync', 'css-libs', 'scripts', 'js-impo
 
 // for all files
 gulp.task('build_styles', function() {
-  return gulp.src('app/css/**/*')
+  return gulp.src('app/assets/css/**/*')
   .pipe(gulp.dest('dist/css'));
 });
 gulp.task('build_fonts', function() {
-  return gulp.src('app/fonts/**/*')
+  return gulp.src('app/assets/fonts/**/*')
   .pipe(gulp.dest('dist/fonts'));
 });
 gulp.task('build_scripts', function() {
-  return gulp.src('app/js/**/*')
+  return gulp.src('app/assets/js/**/*')
   .pipe(gulp.dest('dist/js'));
 });
 gulp.task('build_html', function() {

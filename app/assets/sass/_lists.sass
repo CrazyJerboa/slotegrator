@@ -1,0 +1,101 @@
+/* lists begin
+ ---------------------------------------------------- */
+
+ul, ol
+  display: inline-block
+  padding-left: 0
+  list-style: none
+
+ol
+  counter-reset: li
+  width: 100%
+
+li
+  position: relative
+  margin-bottom: 10px
+  padding-left: 30px
+  font-size: $def_fs
+  color: $def_color
+
+  .li_subtitle
+    display: inline-block
+    margin-top: -4px
+    margin-bottom: 10px
+    width: 100%
+    font-size: 22px
+    color: #000
+
+  ul > &
+    margin-bottom: 20px
+    min-height: 15px
+
+  ol > &
+    margin-bottom: 20px
+    padding-left: 45px;
+    min-height: 25px;
+
+  &:last-child
+    margin-bottom: 0
+
+  &:before
+    display: inline-block
+    position: absolute
+    left: 0
+
+  ul &:before
+    content: ''
+    top: 2px
+    border-radius: 50%
+    background: $ma_color
+    width: 15px
+    height: 15px
+
+  ol > &:before
+    content: counter(li)
+    counter-increment: li
+    top: -4px
+    border-radius: 50%
+    background: $ma_color
+    width: 25px
+    height: 25px
+    line-height: 25px
+    font-size: 12px
+    font-weight: 700
+    text-align: center
+    color: #fff
+
+  ul & li:before
+    border: 1px solid $ma_color
+    background: transparent
+
+  ol > & li:before
+    content: counter(li)')'
+
+  ul > & ol li:before
+    border: 1px solid $ma_color
+    background: transparent
+    content: counter(li)
+    counter-increment: li
+    line-height: 23px
+    color: $ma_color
+
+  ol > & ul li:before
+    content: ''
+    background: $ma_color
+
+  ul &.sublist_outer:before, ol &.sublist_outer:before
+    display: none
+
+@media only screen and (max-width: 479px)
+  li
+    ol > &
+      padding-left: 35px
+    ol > &:before
+      top: -2px
+      width: 25px
+      height: 25px
+      line-height: 25px
+      font-size: 12px
+
+/* lists end
+ ---------------------------------------------------- */

@@ -1,0 +1,15 @@
+// begin logo
+
+- var logo_tag = 'a'
+- if (index_logo_tag == 'span')
+  - logo_tag = 'span'
+
+|
+- if (logo_tag == 'a')
+  a.logo(href="index.html")
+    img.logo-img(src="assets/img/logo.png", alt="Spin & Win")
+- else
+  a.logo(href="index.html")
+    img.logo-img(src="assets/img/logo.png", alt="Spin & Win")
+    
+// end logo

@@ -1,0 +1,30 @@
+/* sections begin
+ ---------------------------------------------------- */
+
+.outer
+  position: relative
+  right: 0
+  z-index: 5
+
+.container
+  padding: 0 $indent
+  max-width: 1030px
+
+.section
+  position: relative
+  padding: $indent_section 0
+
+@media only screen and (max-width: 567px)
+  .container
+    padding: 0 15px
+  .col-xxs-12
+    width: 100%
+  .section
+    padding: 50px 0
+
+@media only screen and (max-width: 479px)
+  .col-xxxs-12
+    width: 100%
+
+/* sections end
+ ---------------------------------------------------- */

@@ -1,0 +1,28 @@
+/* menu-main begin
+ ---------------------------------------------------- */
+
+.menu-main
+  display: flex
+  align-items: center
+  margin: 0
+  width: auto
+  font-size: 0
+  li
+    margin: 0 4.5% 0 0
+    padding: 0
+    font-size: 11px
+    text-transform: uppercase
+    &:last-child
+      margin: 0
+    &::before
+      display: none
+  a
+    display: inline-block
+    white-space: nowrap
+    text-decoration: none!important
+    color: $gray
+    &:hover
+      @extend %links-hover
+
+/* menu-main end
+ ---------------------------------------------------- */

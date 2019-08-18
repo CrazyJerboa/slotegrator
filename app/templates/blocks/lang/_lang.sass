@@ -1,0 +1,77 @@
+
+.lang
+  position: relative
+  z-index: 15
+  margin: 0
+  &__active
+    display: inline-flex
+    align-items: center
+    position: relative
+    padding-right: 10px
+    font-size: 12px
+    cursor: pointer
+    color: $gray_mid
+    transition: $def_trn
+    img
+      margin-right: 10px
+    .triangle
+      position: absolute
+      top: 50%
+      right: 0
+      border-width: 3px 3px 0 3px
+      border-style: solid
+      border-color: transparent
+      border-top-color: gray
+      margin-top: -2px
+  &__list
+    position: absolute
+    top: 100%
+    left: -15px
+    border-radius: 3px
+    background: #fff
+    box-shadow: -6px 10px 9px rgba(4, 29, 72, 0.2)
+    visibility: hidden
+    opacity: 0
+    margin: 0
+    padding: 10px
+    min-width: 100%
+    transition: $def_trn
+    &::before
+      content: ''
+      display: inline-block
+      position: absolute
+      top: -10px
+      left: 0
+      width: 100%
+      height: 10px
+    li
+      margin: 0 0 5px
+      padding: 0
+      font-size: 12px
+      &:last-child
+        margin: 0
+      &::before
+        display: none
+      a
+        display: inline-flex
+        align-items: center
+        text-decoration: none !important
+        color: $def_color
+        &:hover
+          color: $ma_color
+        img
+          margin-right: 7px
+      &.more, &.more a
+        color: $ma_color
+      &.more
+        font-size: 16px
+
+  &:hover .lang__active
+    @extend %links-hover
+    .triangle
+      transform: rotate(180deg)
+  &:hover .lang__list
+    top: 100%
+    visibility: visible
+    opacity: 1
+    transform: translateY(10px)

@@ -1,0 +1,26 @@
+doctype html
+html(lang='en')
+  head
+    - var include_head_title = 'Главная'
+    - var index_logo_tag = 'span'
+    include ../blocks/system/head.pug
+  body
+    .outer
+      include ../blocks/header/header.pug
+      |
+      |
+      // begin wrapper
+      .wrapper
+        .section.white_bg
+          .container
+            include ../blocks/forms/form-login/form-login.pug
+        |
+        |
+      // end wrapper
+      |
+      |
+      // include ../blocks/footer/footer.pug
+    |
+    | 
+    include ../blocks/system/foot.pug
+      

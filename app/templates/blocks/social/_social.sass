@@ -1,0 +1,39 @@
+/* social begin
+ ---------------------------------------------------- */
+
+ul.social
+  margin: 0
+  display: flex
+  align-items: center
+  font-size: 0
+  li
+    margin: 0 15px 0 0
+    padding: 0
+    &:last-child
+      margin: 0
+    &::before
+      display: none
+  a
+    display: inline-block
+    border-radius: 4px
+    background: $gray_mid
+    width: 23px
+    height: 23px
+    line-height: 23px
+    font-size: 8px
+    text-align: center
+    color: #fff
+    &:hover
+      @extend %links-hover_bg
+    &.icon
+      &-fb
+        font-size: 9px
+      &-tw
+        font-size: 7px
+      &-vk
+        font-size: 6px
+      &::before
+        vertical-align: middle
+
+/* social end
+ ---------------------------------------------------- */

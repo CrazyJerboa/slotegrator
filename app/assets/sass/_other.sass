@@ -1,0 +1,224 @@
+/* ----------------------------------------------------
+ other begin
+ ---------------------------------------------------- */
+
+/* displays begin
+  ------------------------------------------------------ */
+
+.ib
+  display: inline-block
+
+.flex
+  display: flex
+  & > *
+    flex: 0 1 auto
+
+/* displays end
+ ------------------------------------------------------ */
+
+/* position begin
+ ------------------------------------------------------ */
+
+.relative
+  position: relative
+
+.absolute
+  position: absolute
+
+.fixed
+  position: absolute
+
+/* position end
+ ------------------------------------------------------ */
+
+/* margins begin
+ ------------------------------------------------------ */
+
+@for $i from 1 to 21
+  @if ($i % 5 == 0)
+    .m#{$i}
+      margin: #{$i}px
+
+@for $i from 1 to 51
+  @if ($i < 21)
+    @if ($i % 5 == 0)
+      .mt#{$i}
+        margin-top: #{$i}px
+      .mb#{$i}
+        margin-bottom: #{$i}px
+      .mtb#{$i}
+        margin-top: #{$i}px
+        margin-bottom: #{$i}px
+  @else
+    @if ($i % 10 == 0)
+      .mt#{$i}
+        margin-top: #{$i}px
+      .mb#{$i}
+        margin-bottom: #{$i}px
+      .mtb#{$i}
+        margin-top: #{$i}px
+        margin-bottom: #{$i}px
+
+/* margins end
+ ------------------------------------------------------ */
+
+/* paddings begin
+ ------------------------------------------------------ */
+
+@for $i from 1 to 21
+  @if ($i % 5 == 0)
+    .p#{$i}
+      padding: #{$i}px
+
+@for $i from 1 to 51
+  @if ($i < 21)
+    @if ($i % 5 == 0)
+      .pt#{$i}
+        padding-top: #{$i}px
+      .pb#{$i}
+        padding-bottom: #{$i}px
+      .ptb#{$i}
+        padding-top: #{$i}px
+        padding-bottom: #{$i}px
+
+      .pl#{$i}
+        padding-left: #{$i}px
+      .pr#{$i}
+        padding-right: #{$i}px
+      .plr#{$i}
+        padding-left: #{$i}px
+        padding-right: #{$i}px
+  @else
+    @if ($i % 10 == 0)
+      .pt#{$i}
+        padding-top: #{$i}px
+      .pb#{$i}
+        padding-bottom: #{$i}px
+      .ptb#{$i}
+        padding-top: #{$i}px
+        padding-bottom: #{$i}px
+
+      .pl#{$i}
+        padding-left: #{$i}px
+      .pr#{$i}
+        padding-right: #{$i}px
+      .plr#{$i}
+        padding-left: #{$i}px
+        padding-right: #{$i}px
+
+/* paddings end
+ ------------------------------------------------------ */
+
+/* vertical aligment begin
+ ------------------------------------------------------ */
+
+.vat
+  vertical-align: top
+.vam
+  vertical-align: middle
+
+/* vertical aligment end
+ ------------------------------------------------------ */
+
+/* wrapping begin
+ ------------------------------------------------------ */
+
+.nowrap
+ white-space: nowrap
+
+/* wrapping end
+ ------------------------------------------------------ */
+
+/* font-family begin
+ ------------------------------------------------------ */
+
+.roboto
+  font-family: $def_font
+.ubuntu
+  font-family: $ubuntu_font
+
+/* font-family end
+ ------------------------------------------------------ */
+
+/* font-sizes begin
+ ------------------------------------------------------ */
+
+@for $i from 8 to 51
+  @if ($i < 21)
+    .fs#{$i}
+      font-size: #{$i}px
+  @else
+    @if ($i % 2 == 0)
+      .fs#{$i}
+        font-size: #{$i}px
+
+/* font-sizes end
+ ------------------------------------------------------ */
+
+/* font-weight begin
+ ------------------------------------------------------ */
+
+@for $i from 100 to 991
+  @if ($i % 100 == 0)
+    .fw#{$i}
+      font-weight: #{$i}
+
+/* font-weight end
+ ------------------------------------------------------ */
+
+/* text decorations & transforms begin
+ ------------------------------------------------------ */
+
+.uppercase
+  text-transform: uppercase
+.notransform
+  text-transform: none
+
+
+.tdu
+  text-decoration: underline
+.tdn
+  text-decoration: none!important
+
+/* text decorations & transforms end
+ ------------------------------------------------------ */
+
+/* text aligment begin
+  ------------------------------------------------------ */
+
+.text
+  &-left
+    text-align: left
+  &-right
+    text-align: right
+  &-center
+    text-align: center
+  &-justify
+    text-align: justify
+
+/* text aligment end
+  ------------------------------------------------------ */
+
+/* colors & backgrounds begin
+  ------------------------------------------------------ */
+
+.white
+  color: #fff
+.black
+  color: #000
+.gray
+  color: $gray
+.gray-light
+  color: $gray_light
+
+.white_bg
+  background: #fff
+.gray_bg
+  background: $gray
+
+/* colors & backgrounds end
+ ------------------------------------------------------ */
+
+/* ----------------------------------------------------
+ other end
+ ---------------------------------------------------- */

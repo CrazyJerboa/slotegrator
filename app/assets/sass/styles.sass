@@ -1,0 +1,118 @@
+// defaults
+// --------------------------------------------------
+
+@import url('https://fonts.googleapis.com/css?family=Roboto+Condensed:300,400,700|Ubuntu:700&display=swap')
+@import url('../fonts/icomoon/style.css')
+
+$def_lh: 1.2
+$def_font: 'Roboto Condensed', sans-serif
+$ubuntu_font: 'Ubuntu', sans-serif
+$def_fs: 16px
+$def_color: #515D67
+$def_trn: .15s
+
+$indent: 20px
+$indent_section: 50px
+
+// colors
+// --------------------------------------------------
+
+$ma_color: #ffce81
+$yellow: #f2de7b
+
+$orange_dark: #992b00
+
+$blue: #2e5fff
+$blue_light: #81fbff
+
+$gray: #a2a1a1
+$gray_light: #e8e9ea
+$gray_mid: #656666
+$gray_dark: #111111
+
+$red: #ff0000
+$green: #00ff00
+
+// --------------------------------------------------
+// ---- MIXINS & EXTENDS ----------------------------
+// --------------------------------------------------
+
+%links-hover
+  color: $yellow
+  text-shadow: -3px 0 8px #e75239, 3px 0 8px #e75239, 0 3px 8px #e75239, 0 -3px 8px #e75239
+%links-hover_bg
+  background: $yellow
+  box-shadow: 0 0 9px 4px #e75239
+  color: #793600
+%links-blue
+  color: $blue_light
+  text-shadow: -3px 0 8px #398be7, 3px 0 8px #398be7, 0 3px 8px #398be7, 0 -3px 8px #398be7
+
+%gradient-blue
+  background: rgb(44,111,145);
+  background: -moz-linear-gradient(left,  rgba(44,111,145,1) 0%, rgba(44,111,145,1) 10%, rgba(97,174,212,1) 20%, rgba(175,225,250,1) 30%, rgba(97,174,212,1) 40%, rgba(175,225,250,1) 50%, rgba(97,174,212,1) 60%, rgba(175,225,250,1) 70%, rgba(97,174,212,1) 80%, rgba(44,111,145,1) 90%, rgba(44,111,145,1) 100%);
+  background: -webkit-linear-gradient(left,  rgba(44,111,145,1) 0%,rgba(44,111,145,1) 10%,rgba(97,174,212,1) 20%,rgba(175,225,250,1) 30%,rgba(97,174,212,1) 40%,rgba(175,225,250,1) 50%,rgba(97,174,212,1) 60%,rgba(175,225,250,1) 70%,rgba(97,174,212,1) 80%,rgba(44,111,145,1) 90%,rgba(44,111,145,1) 100%);
+  background: linear-gradient(to right,  rgba(44,111,145,1) 0%,rgba(44,111,145,1) 10%,rgba(97,174,212,1) 20%,rgba(175,225,250,1) 30%,rgba(97,174,212,1) 40%,rgba(175,225,250,1) 50%,rgba(97,174,212,1) 60%,rgba(175,225,250,1) 70%,rgba(97,174,212,1) 80%,rgba(44,111,145,1) 90%,rgba(44,111,145,1) 100%);
+  filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#2c6f91', endColorstr='#2c6f91',GradientType=1 );
+
+// --------------------------------------------------
+// ---- INCLUDES ------------------------------------
+// --------------------------------------------------
+
+// system
+@import "system"
+
+// typography
+@import "typography"
+
+// icons
+@import "icons"
+
+// sections
+@import "sections"
+
+// buttons
+@import "buttons"
+
+// lists
+@import "lists"
+
+// forms
+@import "forms"
+
+// --------------------------------------------------
+
+// header
+@import "../../templates/blocks/header/header"
+
+// logo
+@import "../../templates/blocks/logo/logo"
+
+// logo
+@import "../../templates/blocks/lang/lang"
+
+// social
+@import "../../templates/blocks/menus/menu-main/menu-main"
+
+// social
+@import "../../templates/blocks/social/social"
+
+// form-login
+@import "../../templates/blocks/forms/form-login/form-login"
+
+// --------------------------------------------------
+
+// footer
+@import "../../templates/blocks/footer/footer"
+
+// --------------------------------------------------
+// ---- INDEX ---------------------------------------
+// --------------------------------------------------
+
+// index page
+// @import "../../templates/pages/index/index"
+
+// --------------------------------------------------
+
+// other
+@import "other"

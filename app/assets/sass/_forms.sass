@@ -1,0 +1,76 @@
+/* forms begin
+ ---------------------------------------------------- */
+
+.form-element
+  position: relative
+  margin-bottom: $indent
+  font-size: 0
+
+.submit-element
+  position: relative
+  padding-top: $indent
+  text-align: center
+
+@mixin placeholder
+  opacity: 0.8
+  font-size: 12px
+  font-style: italic
+  font-weight: 400
+  color: $gray
+  transition: $def_trn
+@mixin placeholder_focus
+  color: transparent
+
+input:not([type="submit"]), textarea, select
+  box-sizing: border-box
+  border: 1px solid $gray
+  border-radius: 3px
+  background: #fff
+  padding: 0 10px
+  width: 100%
+  font-size: 12px
+  color: $def_color
+  transition: $def_trn
+  &:hover
+    border-color: $blue_light
+    box-shadow: 0 0 10px 3px rgba(57, 139, 231, .3)
+  &:focus
+    border-color: $blue_light
+    box-shadow: 0 0 10px 3px rgba(57, 139, 231, .3)
+  &:disabled
+    border-color: $gray !important
+    background: $gray !important
+
+  &.error
+    border-color: $red
+
+  &::-webkit-input-placeholder
+    @include placeholder
+  &::-moz-placeholder
+    @include placeholder
+  &:-moz-placeholder
+    @include placeholder
+  &:-ms-input-placeholder
+    @include placeholder
+
+  &:focus::-webkit-input-placeholder
+    @include placeholder_focus
+  &:focus::-moz-placeholder
+    @include placeholder_focus
+  &:focus:-moz-placeholder
+    @include placeholder_focus
+  &:focus:-ms-input-placeholder
+    @include placeholder_focus
+
+input:not([type="submit"])
+  height: 25px
+
+textarea
+  height: 150px
+  resize: none
+
+select
+  height: 25px
+
+/* forms end
+ ---------------------------------------------------- */

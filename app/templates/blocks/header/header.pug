@@ -1,0 +1,37 @@
+// begin header
+
+header.header
+  .first.header-line
+    .container
+      .header-line__inner
+        |
+        |
+        span.hamburger
+          span
+        |
+        |
+        |
+        include ../logo/logo.pug
+        |
+        |
+        include ../lang/lang.pug
+  |
+  |
+  .second.header-line
+    .container
+      .header-line__inner
+        include ../menus/menu-main/menu-main.pug
+        |
+        |
+        a.fast-reg_btn(href="#") 
+          span.icon.icon-flash
+          span.text Быстрая регистрация
+        |
+        |
+        include ../social/social.pug
+        |
+        |
+        include ../forms/form-login/form-login.pug
+|
+|
+// end header
