@@ -1,0 +1,46 @@
+/* categories begin
+ ---------------------------------------------------- */
+
+.categories
+  display: flex
+  flex-wrap: wrap
+  align-items: center
+  justify-content: center
+  margin: 0 -12px
+
+  .element
+    margin: 15px 12px 0
+    width: calc(20% - 24px)
+    max-width: 200px
+    .icon
+      margin-right: 10px
+      @extend %links-blue
+      &-ruby
+        font-size: 14px
+      &-new
+        font-size: 18px
+      &-slot
+        font-size: 18px
+      &-cards
+        font-size: 20px
+      &-roulette
+        font-size: 20px
+
+@media only screen and (max-width: 991px)
+  .categories
+    .element
+      width: calc(33.333333% - 24px)
+
+@media only screen and (max-width: 767px)
+  .categories
+    .element
+      width: calc(50% - 24px)
+
+@media only screen and (max-width: 479px)
+  .categories
+    .element
+      width: calc(100% - 24px)
+
+
+/* categories end
+ ---------------------------------------------------- */

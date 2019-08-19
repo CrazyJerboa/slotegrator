@@ -101,32 +101,390 @@
       
       <!-- begin wrapper-->
       <div class="wrapper">
-        <div class="section white_bg">
+        <!-- section-logo begin-->
+        <div class="section-logo section">
           <div class="container">
-            <!-- form-login begin-->
-            <form class="form-login">
-              <div class="form-element text-center">
-                <button class="button reg_btn" type="button">Registration</button>
-              </div>
-              
-              <div class="form-element">
-                <input type="text" name="username" placeholder="Username" required>
-              </div>
-              
-              <div class="form-element">
-                <input type="password" name="password" placeholder="Password" required>
-                <a class="forgot_pass_btn" href="#">Forgot your password?</a>
-              </div>
-              
-              <div class="submit-element">
-                <button class="button orange" type="submit">Login</button>
-              </div>
-            </form>
-            <!-- form-login end-->
+            <div class="text-center"><img src="assets/img/logo_section.png" alt="Spin &amp; Win"></div>
           </div>
         </div>
+        <!-- section-logo end-->
         
+        <!-- section-games_info begin-->
+        <div class="section-games_info section">
+          <div class="container">
+            <div class="row">
+              <div class="col-left col col-lg-6">
+                <h2 class="h2 pl20">Last winners</h2>
+                
+                <!-- slider last winners begin-->
+                <div class="slider-last_winners__outer">
+                  <div class="slider-last_winners">
+                    <div class="slide"><a class="slide__img" href="#"><img src="assets/img/last_winners/elem_01.jpg" alt="Ghotic"></a>
+                      
+                      <div class="slide__txt"><a class="slide__game shave" href="#">Ghotic</a>
+                        <p class="slide__money">185.00$</p><a class="slide__player" href="#">PlayerName</a>
+                      </div>
+                    </div>
+                    
+                    <div class="slide"><a class="slide__img" href="#"><img src="assets/img/last_winners/elem_02.jpg" alt="Game of Thrones"></a>
+                      
+                      <div class="slide__txt"><a class="slide__game shave" href="#">Game of Thrones</a>
+                        <p class="slide__money">185.00$</p><a class="slide__player" href="#">PlayerNamePlayerNamePlayerName</a>
+                      </div>
+                    </div>
+                    
+                    <div class="slide"><a class="slide__img" href="#"><img src="assets/img/last_winners/elem_03.jpg" alt="Robyn"></a>
+                      
+                      <div class="slide__txt"><a class="slide__game shave" href="#">Robyn</a>
+                        <p class="slide__money">185.00$</p><a class="slide__player" href="#">PlayerName</a>
+                      </div>
+                    </div>
+                    
+                    <div class="slide"><a class="slide__img" href="#"><img src="assets/img/last_winners/elem_04.jpg" alt="Robyn"></a>
+                      
+                      <div class="slide__txt"><a class="slide__game shave" href="#">Robyn</a>
+                        <p class="slide__money">185.00$</p><a class="slide__player" href="#">PlayerName</a>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <!-- slider last winners end-->
+              </div>
+              
+              <div class="col-right col col-lg-6">
+                <h2 class="h2 pl20">Jackpot</h2>
+                
+                <!-- jackpot begin-->
+                <div class="jackpot">
+                  <div class="jackpot__element first">
+                    <div class="jackpot__img"><img src="assets/img/jackpot/first.png" alt="1"></div>
+                    
+                    <p class="jackpot__number">7 859 352</p>
+                  </div>
+                  
+                  <div class="jackpot__element second">
+                    <div class="jackpot__img"><img src="assets/img/jackpot/second.png" alt="2"></div>
+                    
+                    <p class="jackpot__number">2 148 759</p>
+                  </div>
+                  
+                  <div class="jackpot__element third">
+                    <div class="jackpot__img"><img src="assets/img/jackpot/third.png" alt="3"></div>
+                    
+                    <p class="jackpot__number">1 589 654</p>
+                  </div>
+                </div>
+                <!-- jackpot end-->
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- section-games_info end-->
+        
+        <!-- section-games_list begin-->
+        <div class="section-games_list section">
+          <div class="container">
+            <!-- section-games_list begin-->
+            <div class="categories"><a class="element button transparent" href="#"><span class="icon icon-ruby"></span>Popular</a>
+              <a class="element button transparent" href="#"><span class="icon icon-new"></span>New</a>
+              <a class="element button transparent" href="#"><span class="icon icon-slot"></span>Slot games</a>
+              <a class="element button transparent" href="#"><span class="icon icon-cards"></span>Card games</a>
+              <a class="element button transparent" href="#"><span class="icon icon-roulette"></span>Roulette</a>
+            </div>
+            <!-- section-games_list end-->
+            
+            <!-- sort_search begin-->
+            <div class="sort_search">
+              <!-- sort begin-->
+              <div class="sort__outer">
+                <p class="sort__label">Sort by:</p>
+                
+                <ul class="sort">
+                  <li><a href="#">POPULARITY</a></li>
+                  <li><a href="#">A-Z</a></li>
+                </ul>
+              </div>
+              <!-- sort end-->
+              
+              <!-- form-search begin-->
+              <form class="form-search">
+                <div class="form-element">
+                  <input type="search" placeholder="Search for game ..." required>
+                  
+                  <button class="icon icon-search" type="submit"></button>
+                </div>
+              </form>
+              <!-- form-search end-->
+            </div>
+            <!-- sort_search end-->
+            
+            <!-- games_list begin-->
+            <div class="games_list">
+              <div class="promo">
+                <!-- slider promo begin-->
+                <div class="slider-promo__outer">
+                  <div class="slider-promo__inner">
+                    <div class="promo__head">Promotions</div>
+                    
+                    <div class="slider-promo">
+                      <div class="slide"><a href="#"><img src="assets/img/promo/elem_01.jpg" alt="">
+                          <span class="slide__txt"><span class="slide__title">Reach for the stars with up to 200 free spins</span><span class="slide__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt leo malesuada eros elementum eget eu ligula. </span></span></a></div>
+                      
+                      <div class="slide"><a href="#"><img src="assets/img/promo/elem_02.jpg" alt="">
+                          <span class="slide__txt"><span class="slide__title">Reach for the stars with up to 200 free spins</span><span class="slide__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt leo malesuada eros elementum eget eu ligula. </span></span></a></div>
+                      
+                      <div class="slide"><a href="#"><img src="assets/img/promo/elem_03.jpg" alt="">
+                          <span class="slide__txt"><span class="slide__title">Reach for the stars with up to 200 free spins</span><span class="slide__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt leo malesuada eros elementum eget eu ligula. </span></span></a></div>
+                      
+                      <div class="slide"><a href="#"><img src="assets/img/promo/elem_04.jpg" alt="">
+                          <span class="slide__txt"><span class="slide__title">Reach for the stars with up to 200 free spins</span><span class="slide__description">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus tincidunt leo malesuada eros elementum eget eu ligula. </span></span></a></div>
+                    </div>
+                  </div>
+                </div>
+                <!-- slider promo end-->
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_01.jpg" alt="Lucky Magic">
+                  </div>
+                  
+                  <p class="game__name"> <a href="#">Lucky Magic</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_02.jpg" alt="Anubis’ secret">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Anubis’ secret</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_03.jpg" alt="Dream of Knight">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Dream of Knight</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_01.jpg" alt="Lucky Magic">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Lucky Magic Lucky Magic Lucky Magic Lucky Magic</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_02.jpg" alt="Anubis’ secret">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Anubis’ secret</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_03.jpg" alt="Dream of Knight">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Dream of Knight</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_01.jpg" alt="Lucky Magic">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Lucky Magic</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_02.jpg" alt="Anubis’ secret">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Anubis’ secret</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_03.jpg" alt="Dream of Knight">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Dream of Knight</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_04.jpg" alt="Submarine adventure">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Submarine adventure</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_05.jpg" alt="The big money scent">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">The big money scent</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_01.jpg" alt="Lucky Magic">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Lucky Magic</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_02.jpg" alt="Anubis’ secret">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Anubis’ secret</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_03.jpg" alt="Dream of Knight">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Dream of Knight</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_04.jpg" alt="Submarine adventure">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Submarine adventure</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_05.jpg" alt="The big money scent">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">The big money scent</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_01.jpg" alt="Lucky Magic">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Lucky Magic</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_02.jpg" alt="Anubis’ secret">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Anubis’ secret</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_03.jpg" alt="Dream of Knight">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Dream of Knight</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_04.jpg" alt="Submarine adventure">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">Submarine adventure</a></p>
+                </div>
+              </div>
+              
+              <div class="game">
+                <div class="game__inner">
+                  <div class="game__img"><a class="play_btn button" href="#">Play now</a>
+                    <a class="demo_btn button orange" href="#">Demo</a>
+                    <img src="assets/img/games/elem_05.jpg" alt="The big money scent">
+                  </div>
+                  
+                  <p class="game__name"><a href="#">The big money scent</a></p>
+                </div>
+              </div>
+            </div>
+            
+            <div class="text-center">
+              <button class="button" type="button">More games</button>
+            </div>
+            <!-- games_list end-->
+          </div>
+        </div>
+        <!-- section-games_list end-->
       </div>
+      
       <!-- end wrapper-->
       
       <!-- begin footer-->

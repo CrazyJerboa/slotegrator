@@ -1,0 +1,28 @@
+/* sort_search begin
+ ---------------------------------------------------- */
+
+.sort_search
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  align-items: center
+  margin: 10px 0
+
+  .form-search
+    width: 240px
+
+@media only screen and (max-width: 479px)
+  .sort_search
+    flex-direction: column
+    
+    .sort__outer
+      align-self: flex-start
+      margin-bottom: 15px
+    .form-search
+      order: -1
+      margin: 15px auto 25px
+      width: 100%
+      max-width: 200px
+
+/* sort_search end
+ ---------------------------------------------------- */

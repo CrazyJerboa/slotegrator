@@ -51,6 +51,7 @@ gulp.task('js-import', function() {
 gulp.task('scripts', function() {
   return gulp.src([
     'app/assets/libs/device/device.js',
+    'app/assets/libs/shave/shave.js',
     'app/assets/libs/tiny-slider-master/dist/tiny-slider.js'
   ])
   .pipe(concat('libs.min.js'))

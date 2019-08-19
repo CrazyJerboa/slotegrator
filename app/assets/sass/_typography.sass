@@ -1,6 +1,13 @@
 /* typography begin
  ---------------------------------------------------- */
 
+h2, .h2
+  margin: 0 0 15px
+  font-size: 14px
+  font-weight: 400
+  text-transform: uppercase
+  @extend %links-hover
+
 p
   margin: 0 0 15px
 
@@ -11,7 +18,6 @@ a
 
   &:hover
     text-decoration: none
-    color: $ma_color
 
   &.inherit
     color: inherit

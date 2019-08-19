@@ -40,3 +40,9 @@ function outerSetMinHeight() {
 // --------------------------------------------------
 
 @import 'app\templates\blocks\header\_header.js'
+
+@import 'app\templates\blocks\sliders\slider-last_winners\_slider-last_winners.js'
+
+@import 'app\templates\blocks\games_list\_games_list.js'
+
+@import 'app\templates\blocks\sliders\slider-promo\_slider-promo.js'

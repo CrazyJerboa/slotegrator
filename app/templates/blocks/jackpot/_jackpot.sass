@@ -1,0 +1,69 @@
+/* jackpot begin
+ ---------------------------------------------------- */
+
+.jackpot
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  position: relative
+  margin: 10px 0 0
+  padding: 0 20px
+
+  &__element
+    display: flex
+    align-items: center
+    margin: 0 0 10px
+
+  &__img
+    border-radius: 50%
+    box-shadow: 0 0 15px rgba(255, 255, 255, .6)
+    overflow: hidden
+    width: 38px
+    height: 38px
+    img
+      object-fit: cover
+      width: 100%
+      height: 100%
+
+  &__number
+    margin: 0
+    padding: 0 5px
+    width: calc(100% - 38px)
+    line-height: 1
+    white-space: nowrap
+    letter-spacing: -1px
+    font-family: $ubuntu_font
+    font-size: 22px
+    font-weight: 700
+    color: $gray_light
+
+  .first &__number
+    @extend %text-gradient-gold
+    background-clip: text
+    color: transparent
+  .second &__number
+    @extend %text-gradient-silver
+    background-clip: text
+    color: transparent
+  .third &__number
+    @extend %text-gradient-bronze
+    background-clip: text
+    color: transparent
+
+@media only screen and (min-width: 992px) and (max-width: 1199px)
+  .jackpot
+    &__number
+      font-size: 18px
+
+@media only screen and (min-width: 480px) and (max-width: 567px)
+  .jackpot
+    &__number
+      font-size: 18px
+
+@media only screen and (max-width: 479px)
+  .jackpot
+    &__element
+      width: 100%
+
+/* jackpot emd
+ ---------------------------------------------------- */

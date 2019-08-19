@@ -1,0 +1,162 @@
+/* games_list begin
+ ---------------------------------------------------- */
+
+.games_list
+  margin: 0 -12px
+  &::after
+    content: ''
+    display: block
+    clear: both
+
+  .promo
+    position: relative
+    margin: 0 12px
+    width: calc(40% - 24px)
+    float: right
+    &__head
+      display: flex
+      justify-content: center
+      align-items: center
+      border-radius: 2px
+      background: #d6f0ff
+      box-shadow: 0 0 7px 5px rgba(85, 105, 255, .7)
+      margin-bottom: 2px
+      height: 37px
+      font-size: 20px
+      font-weight: 700
+      text-transform: uppercase
+      color: $blue_dark
+
+  .game
+    position: relative
+    margin: 0 12px 24px
+    padding-top: 14.5%
+    width: calc(20% - 24px)
+    height: 0
+    float: left
+
+    &__inner
+      position: absolute
+      top: 0
+      left: 0
+      width: 100%
+      height: 100%
+
+    &__img
+      display: flex
+      flex-direction: column
+      justify-content: center
+      align-items: center
+      position: relative
+      overflow: hidden
+      margin-bottom: 10px
+      height: calc(100% - 25px)
+      transition: $def_trn
+
+      &::before
+        content: ''
+        display: block
+        position: absolute
+        top: 0
+        left: 0
+        z-index: 5
+        @extend %gradient-blue
+        width: 100%
+        height: 100%
+
+      &::after
+        content: ''
+        display: block
+        position: absolute
+        top: 1px
+        left: 1px
+        z-index: 15
+        background: #000
+        opacity: 0
+        width: calc(100% - 2px)
+        height: calc(100% - 2px)
+        transition: $def_trn
+
+      img
+        position: absolute
+        top: 1px
+        left: 1px
+        z-index: 10
+        object-fit: cover
+        width: calc(100% - 2px)
+        height: calc(100% - 2px)
+
+      .button
+        position: relative
+        z-index: 20
+        opacity: 0
+        margin: 5px
+        transition: $def_trn, opacity .3s, transform .3s
+        &.play_btn
+          transform: translateY(-10px)
+        &.demo_btn
+          transform: translateY(10px)
+
+    &:hover
+      .game__img
+        box-shadow: 0 0 7px rgba(85, 105, 255, .7)
+        &::after
+          opacity: .8
+        .button
+          opacity: 1
+          transform: translateY(0)
+          transition: $def_trn, opacity .3s .1s, transform .3s .1s
+
+    &__name
+      margin: 0
+      height: 15px
+      font-size: 12px
+      text-transform: uppercase
+      color: #fff
+      a
+        text-decoration: none
+        color: #fff
+        &:hover
+          @extend %links-hover
+
+.mobile, .tablet
+  .games_list
+    .game
+      &__img
+        &::after
+          opacity: .3 !important
+        .button
+          opacity: 1 !important
+          transform: translateY(0) !important
+
+@media only screen and (max-width: 991px)
+  .games_list
+    .promo
+      width: calc(50% - 24px)
+
+    .game
+      padding-top: 17.98%
+      width: calc(25% - 24px)
+
+@media only screen and (max-width: 767px)
+  .games_list
+    .promo
+      width: calc(66.666666% - 24px)
+
+    .game
+      padding-top: 23.9%
+      width: calc(33.333333% - 24px)
+
+@media only screen and (max-width: 567px)
+  .games_list
+    .promo
+      width: calc(100% - 24px)
+
+@media only screen and (max-width: 479px)
+  .games_list
+    .game
+      padding-top: 40%
+      width: calc(50% - 24px)
+
+/* games_list end
+ ---------------------------------------------------- */
