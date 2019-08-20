@@ -499,6 +499,14 @@ ul li.sublist_outer:before, ol li.sublist_outer:before {
   font-size: 0;
 }
 
+.form-element span.error {
+  position: absolute;
+  top: -13px;
+  left: 0;
+  font-size: 10px;
+  color: #ff0000;
+}
+
 .submit-element {
   position: relative;
   padding-top: 20px;
@@ -906,6 +914,9 @@ select {
 }
 
 @media only screen and (max-width: 767px) {
+  .header {
+    z-index: 100;
+  }
   .header-line.second {
     position: fixed;
     top: -50px;
@@ -2200,6 +2211,12 @@ ul.social a.icon::before {
 .form-search .form-element {
   position: relative;
   margin: 0;
+}
+
+.form-search .form-element span.error {
+  top: 0;
+  left: 10px;
+  z-index: 20;
 }
 
 .form-search input {
