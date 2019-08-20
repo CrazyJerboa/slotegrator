@@ -1135,23 +1135,23 @@ select {
 }
 
 @media only screen and (max-height: 479px) {
-  .header-line.second .menu__close {
+  html:not(.tablet) .header-line.second .menu__close {
     top: 68px;
   }
-  .header-line.second .header-line__inner {
+  html:not(.tablet) .header-line.second .header-line__inner {
     padding: 15px 0;
   }
-  .header .menu-main li {
+  html:not(.tablet) .header .menu-main li {
     margin-bottom: 10px;
     font-size: 13px;
   }
-  .header .form-login_btn {
+  html:not(.tablet) .header .form-login_btn {
     top: 18px;
   }
-  .header .form-login__close {
+  html:not(.tablet) .header .form-login__close {
     top: 23px;
   }
-  .header .form-login__outer {
+  html:not(.tablet) .header .form-login__outer {
     padding: 45px 15px 15px;
   }
 }

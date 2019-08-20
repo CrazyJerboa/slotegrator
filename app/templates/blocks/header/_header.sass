@@ -376,28 +376,29 @@ $second_height: 80px
 
 
 @media only screen and (max-height: 479px)
-  .header
-    &-line
-      &.second
-        .menu__close
-          top: 68px
-        .header-line__inner
-          padding: 15px 0
+  html:not(.tablet)
+    .header
+      &-line
+        &.second
+          .menu__close
+            top: 68px
+          .header-line__inner
+            padding: 15px 0
 
-    .menu-main
-      li
-        margin-bottom: 10px
-        font-size: 13px
+      .menu-main
+        li
+          margin-bottom: 10px
+          font-size: 13px
 
-    .form-login_btn
-      top: 18px
+      .form-login_btn
+        top: 18px
 
 
-    .form-login
-      &__close
-        top: 23px
-      &__outer
-        padding: 45px 15px 15px
+      .form-login
+        &__close
+          top: 23px
+        &__outer
+          padding: 45px 15px 15px
 
 /* header end
  ---------------------------------------------------- */
