@@ -1967,8 +1967,14 @@ ul.social a.icon::before {
 }
 
 @media only screen and (max-width: 479px) {
+  .jackpot {
+    -webkit-box-pack: center;
+    -webkit-justify-content: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
   .jackpot__element {
-    width: 100%;
+    margin: 0 10px 10px;
   }
 }
 
@@ -2049,9 +2055,29 @@ ul.social a.icon::before {
 }
 
 @media only screen and (max-width: 479px) {
+  .categories {
+    margin: 0 -7px;
+  }
   .categories .element {
-    width: -webkit-calc(100% - 24px);
-    width: calc(100% - 24px);
+    margin: 15px 7px 0;
+    width: -webkit-calc(50% - 14px);
+    width: calc(50% - 14px);
+    font-size: 10px;
+  }
+  .categories .element .icon-ruby {
+    font-size: 12px;
+  }
+  .categories .element .icon-new {
+    font-size: 16px;
+  }
+  .categories .element .icon-slot {
+    font-size: 16px;
+  }
+  .categories .element .icon-cards {
+    font-size: 18px;
+  }
+  .categories .element .icon-roulette {
+    font-size: 18px;
   }
 }
 
